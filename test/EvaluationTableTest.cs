@@ -1,3 +1,4 @@
+using System.Configuration;
 using System.Data;
 
 public class EvaluationTableTest{
@@ -13,10 +14,13 @@ public class EvaluationTableTest{
         Console.WriteLine(tabloHTable.Rows.Count);
         foreach (DataRow row in tabloHTable.Rows)
         {
-            foreach (DataColumn col in tabloHTable.Columns)
-            {
-                Console.WriteLine(row[col]);
-            }
+            Setting.EvaluationList.Add(EvaluationTableAction.fillEvaluationModel(row));
+        }
+
+        //Write all data in Setting.EvaluationList
+        foreach (EvaluationTable etx in Setting.EvaluationList)
+        {
+          Console.WriteLine(etx.Reason);  
         }
     }
 }

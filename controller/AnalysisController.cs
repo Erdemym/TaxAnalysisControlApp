@@ -16,7 +16,6 @@ public abstract class AnalysisController
     public abstract void PreControl();
     public abstract void Analysis();
 
-
     public static void CheckErrorFlag()
     {
         if (Setting.ErrorFlag)

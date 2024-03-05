@@ -69,4 +69,6 @@ public class SettingAction
             Setting.EvaluationList.Add(evaluationData);
         }
     }
+
+    
 }

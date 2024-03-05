@@ -4,7 +4,7 @@ using System.Data.OleDb;
 
 public class OleDbHelper : IDisposable
 {
-    private const string analysisFilePath = "analiz.xlsx"; 
+    private const string analysisFilePath = "deg-analiz.xlsx"; 
     private const string evaluationFilePath = "degerlendirme.xlsx"; 
 
 

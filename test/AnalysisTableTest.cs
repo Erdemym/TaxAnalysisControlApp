@@ -14,8 +14,13 @@ public class AnalysisTableTest{
         {
             foreach (DataColumn col in tabloHTable.Columns)
             {
-                Console.WriteLine(row[col]);
+                Setting.ResultList.Add(ResultTableAction.fillResultModel(row));
             }
+        }
+
+        foreach (ResultTable rtx in Setting.ResultList)
+        {
+            Console.WriteLine(rtx.Result);  
         }
         
     }

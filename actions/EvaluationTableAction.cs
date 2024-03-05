@@ -12,7 +12,7 @@ public class EvaluationTableAction{
         evaluation.Evaluation = row["Değerlendirme"].ToString();
         evaluation.Subject = row["İnceleme Konusu"].ToString();
         evaluation.TaxNo = row["Vergi No"].ToString();
-        evaluation.Title = row["Unvan"].ToString();
+        evaluation.Title = row[9].ToString();
         evaluation.Amount = Convert.ToDecimal(row["SBK Tutarı"]);
         evaluation.Years = row["İnceleme Yılları"].ToString();
         evaluation.Reason = row["Gerekçe"].ToString();

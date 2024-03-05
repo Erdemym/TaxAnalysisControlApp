@@ -62,6 +62,10 @@ public static class CheckDatas{
         }
     }
 
-    
+    public static bool CheckAnaysisType(string reason){
+        throw new NotImplementedException();
+    }
+
+
    
 }
