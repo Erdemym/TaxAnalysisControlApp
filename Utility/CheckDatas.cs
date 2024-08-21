@@ -16,6 +16,7 @@ public static class CheckDatas{
             if (taxPayerTitle.Contains(element))
             {
                 result.Add(element);
+                //if Setting.SpecialTitleList does not contain element, add it
             }
 
 
@@ -24,7 +25,12 @@ public static class CheckDatas{
 
         if (result.Count > 0)
         {
-            Print.WriteWarningMessage("VKN " + taxNumber + " li " + taxPayerTitle + " unvanlı mükellef unvanı : \"" + string.Join(", ", result) + "\" karakteri içermektedir. Yönetici İle Görüşülsün.");
+            if (!Setting.SpecialTitleTaxList.Contains(taxNumber))
+                {
+                    Setting.SpecialTitleTaxList.Add(taxNumber);
+                    Print.WriteWarningMessage("VKN " + taxNumber + " li " + taxPayerTitle + " unvanlı mükellef unvanı : \"" + string.Join(", ", result) + "\" karakteri içermektedir. Yönetici İle Görüşülsün.");
+                }
+            
         }
 
     }

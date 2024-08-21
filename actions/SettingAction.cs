@@ -6,6 +6,8 @@ public class SettingAction
     {
         Print.WriteProgramName();
         getVtrSettings();
+        getResultSettings();
+        getEvaluationSettings();
 
     }
      private void getVtrSettings()

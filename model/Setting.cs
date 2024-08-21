@@ -12,7 +12,7 @@ public class Setting
     private static bool _errorFlag = false;
     private static List<ResultTable> _resultList = new List<ResultTable>();
     private static List<EvaluationTable> _evaluationList = new List<EvaluationTable>();
-
+    private static List<string> _specialTitleTaxList = new List<string>();
     public static bool ErrorFlag { get => _errorFlag; set => _errorFlag = value; }
     public static int RowCount { get; set; }
     public static double Amount { get; set; }
@@ -27,28 +27,41 @@ public class Setting
 
     public static string? VtrTaxPayerTitle { get; internal set; }
     public static string? VtrReportType { get; internal set; }
-    
+
     public static string? VtrEvaluationDate { get; internal set; }
     public static string? VtrTaxPeriod { get; internal set; }
 
-    public static List<ResultTable> ResultList {
-        get 
+    public static List<ResultTable> ResultList
     {
-        return _resultList;
+        get
+        {
+            return _resultList;
+        }
+        set
+        {
+            _resultList = value;
+        }
     }
-    set 
+    public static List<EvaluationTable> EvaluationList
     {
-        _resultList = value;
+        get
+        {
+            return _evaluationList;
+        }
+        set
+        {
+            _evaluationList = value;
+        }
     }
-    }
-    public static List<EvaluationTable> EvaluationList { 
-    get
+    public static List<string> SpecialTitleTaxList
     {
-        return _evaluationList;
-    }
-    set 
-    {
-        _evaluationList = value;
-    }
+        get
+        {
+            return _specialTitleTaxList;
+        }
+        set
+        {
+            _specialTitleTaxList = value;
+        }
     }
 }

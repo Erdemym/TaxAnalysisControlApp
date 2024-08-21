@@ -13,7 +13,7 @@ public class EvaluationTableAction{
         evaluation.Subject = row["İnceleme Konusu"].ToString();
         evaluation.TaxNo = row["Vergi No"].ToString();
         evaluation.Title = row[9].ToString();
-        evaluation.Amount = Convert.ToDecimal(row["SBK Tutarı"]);
+        evaluation.Amount = Convert.ToDecimal(row["SBK Tutarı/İncelemeye Konu Tutar"]);
         evaluation.Years = row["İnceleme Yılları"].ToString();
         evaluation.Reason = row["Gerekçe"].ToString();
         evaluation.ReportDate = row["(İZDK) Rapor Tarihi"].ToString();
